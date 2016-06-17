@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body ng-controller="myCtrl">
+
+<ng-map center="39.363882,-9.044922" zoom="4">
+    <marker position="{{marker.capitalPosition}}" title="{{marker.capital}}" ng-repeat="marker in markers" on-click="showData()"></marker>
+    <info-window id="pop">
+        <div ng-non-bindable="">
+
+        </div>
+    </info-window>
+</ng-map>
+
+
+<script src="js/lodash.js"></script>
+<script src="js/angular.min.js"></script>
+<script src="js/angular-simple-logger.js"></script>
+<script src="js/angular-google-maps.js"></script>
+<script src="js/ng-map.js"></script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDoYkMEEWTzNe0p2Jk9HDzmhNhDfR0iK0"></script>
+<script src="app.js"></script>
+</body>
+</html>
